@@ -1,0 +1,126 @@
+<app-banner></app-banner>
+
+<section class="container">
+    <div class="title">
+        <h4>Hè đang cháy, săn sale 7.7 ngay!</h4>
+        <p>Vé vui chơi & tour giảm ngay đến 1 triệu</p>
+        <p>Quẩy vui vẻ, săn ưu đãi 7.7 với mã giảm giá vé chơi & tour đến 1 triệu đồng cực đã! Deal vé vui chơi thần
+            thánh chỉ từ 99k. Giờ vàng Flast-sale từ 10.00 - 13.00H vui chơi tại Thái Lan </p>
+        <p>Muốn hè bùng chất, sap thiếu sale 7.7! Đừng quên sao chép mã giảm giá & nhập lại bước thanh toán để chuyến đi
+            tiết kiệm bạn nhé!</p>
+    </div>
+    <form action="" class="container " style="width: 440px;">
+        <h4>Mã giảm giá cả ngày đến 1 triệu</h4>
+        <input type="text" placeholder="VUICHOI77">
+        <p>Giảm 6% lên đến 1 triệu khi đặt vé vui chơi trong nước từ 500k</p>
+        <p>Giảm 5% lên đến 500k khi đăt vé vui chơi quốc tế từ 1,5 triệu</p>
+    </form>
+    <h3 class="text-center">FLASHSALE TỚI ƯU ĐÃI HỜI</h3>
+    <form action="" class="container " style="width: 440px;">
+        <h4>TH Mã giảm giá Flast Sale (11h-13h)</h4>
+        <input type="text" placeholder="VUICHOI77">
+        <p>Giảm giá đến 10% khi đạt từ 1.5 triệu </p>
+    </form>
+    <section>
+        <img class="mw-100 col-12"
+            src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/27/1687857745512-bbe620e5d8335060709e186d4425524f.png?tr=q-75"
+            alt="">
+    </section>
+    <section>
+        <div class="list-hotel mt-2 ">
+            <div class="">
+                <tabset type="pills">
+                    <tab heading="Hà Nội" class="container ms-3">
+                        <div class="row ">
+                            <ng-container *ngFor="let item of listTour; let index=index">
+
+                                <div class=" card text-center">
+                                    <div class="img text-center">
+                                        <img class="mw-100" src="{{item.img}}" alt=""
+                                            style="width: 390px; height: 260px;">
+                                    </div>
+                                    <div class="item">
+                                        <h5> {{item.title}}</h5>
+                                        <div class="row mt-1">
+                                            <p class="price col-8"><i class="pi pi-shopping-bag">
+                                                    {{item.price}} </i>
+                                            </p>
+                                            <div class="icon col-4 ">
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+
+
+                                            </div>
+                                        </div>
+                                        <a class="" href=""
+                                            style="font-weight: 500; margin-bottom: 10px;width: 120px;height: 40px;">Xem
+                                            thêm</a>
+
+
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </tab>
+                    <tab heading="Đà Nẵng" class="container ms-3">
+                        <div class="row ">
+                            <ng-container *ngFor="let item of danang; let index=index">
+
+                                <div class="  card text-center">
+                                    <div class="img text-center">
+                                        <img class="" src="{{item.img}}" alt="" style="width: 260px; height: 200px;">
+                                    </div>
+                                    <div class="item">
+                                        <h5> {{item.title}}</h5>
+                                        <div class="row mt-1">
+                                            <p class="price col-8"><i class="pi pi-shopping-bag"> {{item.price}} </i>
+                                            </p>
+                                            <div class="icon col-4 ">
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+
+
+                                            </div>
+                                        </div>
+                                        <a class="" href=""
+                                            style="font-weight: 500; margin-bottom: 10px;width: 120px;height: 40px;">Xem
+                                            thêm</a>
+
+
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </tab>
+                    <tab heading="Nha Trang" class="container ms-3"></tab>
+                    <tab heading="Hồ Chí Minh" class="container ms-3"></tab>
+
+                    <tab heading="Hải Phòng" class="container ms-3"></tab>
+
+                    <tab heading="Thái Bình" class="container ms-3"></tab>
+
+                </tabset>
+            </div>
+        </div>
+
+    </section>
+    <section>
+
+        <h3>Cơ hội trúng quà khủng</h3>
+        <div class="row">
+            <div class="col-6">
+                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/29/1688005707397-6b93093445a94521d363e824f96dc91f.png?tr=q-75,w-640"
+                    alt="">
+            </div>
+            <div class="col-6">
+                <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/29/1688005766711-4f39eaff81485fbcefec7f8aa26df1e9.png?tr=q-75,w-640"
+                    alt="">
+            </div>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</section>

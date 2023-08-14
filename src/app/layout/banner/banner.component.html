@@ -1,0 +1,75 @@
+<!-- <div class="row">
+  <div class="banner col-12">
+    <img class="mw-100" style="height: 460px ;width: 100%;"
+      src="https://s3-alpha-sig.figma.com/img/04b1/595b/cf81519049da9ae285e67cd5c7593b41?Expires=1688342400&Signature=iLVtzDWYPYhXYN7zoXDN0~DRgxxsOPKqB~QusgPm46wikISWoJDyubBo3Xxtg5tiFz4UJk1IBZ-pRJgAQEcwmxjno4pUrSyxun~enZmouZslHiB2~pa7C4wuI1-gOcEUdi5xbcg9IRRoDIzBQrHXFjW79FfbcXEms1Rffph6zf9KrTYS6LSmOlr2TFEr-RSHU93sd80BXC8AReiT850vJ6SYX7TzYnECgUWNkfw36DS~56vfgt6BxurMW3BWgEhcDuxZdMx8JtnV5PzcylbTlLeb1g5za1AGkXuFnNH7dGCQou1~vnRer-45Nqmp82vCNGtaAedw5oS9JrkwqxidJw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      alt="">
+  </div>
+</div> -->
+<div class="banner" style="margin-bottom: 90px;">
+    <carousel class="">
+        <div class="box1 ">
+            <slide style="position: relative;">
+                <img class="mw-100" style="height: 460px ;width: 100%;" src="../assets/img/bgk.png" alt="">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </slide>
+            <slide>
+                <img class="mw-100" style="height: 460px ;width: 100%;" src="../assets/img/bgk3.jpg" alt="">
+
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </slide>
+            <!-- <slide>
+                <img class="mw-100" style="height: 460px ;width: 100%;"
+                    src="https://s3-alpha-sig.figma.com/img/0548/15f8/3bda1da488c820cdf2ee8dd028aff426?Expires=1690156800&Signature=JPXw2YisecOarq2bQ0T2lhdEyXIUfJ5RZpH9mrK0MoATMcG9L3NVsSOb5VylKu5ZmmK4RZ5VtIPCg19XyOqS091Ka2twIPuDt~C9b4aO4~239pzQ-dvzcRHcJyVoRKgOWE~OCMsJCKrKtnHkm7tzwg230yVc0dvgfd59z9NtHSuAfkO-ViQmVSxOHMtrjP8jBbm~fWcKI1R3p-KkN89YjSl-CysME5AbG0ragbPW4FXXpWrn1kGyT-Z0MLXSIx3R9WMxiWMSXhF39mN0beXFg9QW8isZ1r5m-abk5i~xpw6k8n5e4YLOGB6mcnPBf7CCxUww9HIKFQfGoYZfRgebxw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt="">
+                <div class="carousel-caption d-none d-md-block">
+
+                </div>
+            </slide> -->
+        </div>
+        <div class="container "
+            style="width: 1000px;left: 21%;top: 172px;  position: absolute; z-index: 2;background-color: aliceblue; border-radius: 0.7rem;">
+            <div class="row">
+                <div class="box1 col-6 " style="padding-left: 30px;">
+                    <div class="item1">
+
+                        <ng-template #customItemTemplate let-model="item" let-index="index">
+                            <h5 style="height: 20px;">Tour: {{model | json}} Mã số: {{ index }}</h5>
+                        </ng-template>
+
+
+                    </div>
+                    <div class="item2 mt-2">
+                        <pre style="width: 300px; height: 30px ;padding-top: 2px;color: black; font-family: 'Times New Roman', Times, serif; font-size: 18px; "
+                            class=" card-block card-header ">Địa điểm {{selected | json}}</pre>
+                        <input placeholder="Mời bạn chọn địa điểm du lịch" [(ngModel)]="selected" [typeahead]="states"
+                            [typeaheadItemTemplate]="customItemTemplate" class="form-control"
+                            style="width: 300px; padding-left: 10px;height: 44px;">
+                    </div>
+                </div>
+
+
+
+                <div class="box2 col-6 mt-2 " style="height: 90px;">
+                    <p style=" font-size: 18px;"><code></code> Thời gian xuất hành</p>
+                    <div class="row">
+                        <div class="col-8 form-group mb-3" style="margin-top: 5px;">
+                            <input class="form-control " #drp="bsDaterangepicker" bsDaterangepicker
+                                [(ngModel)]="bsRangeValue" style="width: 270px; padding-left: 10px; height: 44px;">
+                        </div>
+                        <!-- <div class="col-4  form-group">
+                            <button [disabled]="" style=" margin-top: 6px; height: 44px; width: 112px; background-color: #FF3366 ;color:
+                                aliceblue;" class="btn  ms-4" [attr.aria-expanded]="drp.isOpen" type="button"
+                                (click)="test()">
+                                Tìm kiếm</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </carousel>
+</div>

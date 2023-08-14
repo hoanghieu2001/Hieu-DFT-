@@ -1,0 +1,37 @@
+ul li a {
+    color: #031213;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button {
+    font-size: 20px;
+    color: #031213;
+    font-weight: 500;
+}
+
+
+nav {
+    /* position: relative; */
+    z-index: 2;
+}
+
+.row {
+    position: absolute;
+    top: 55px;
+    background-color: #fff;
+    width: 100%;
+    /* z-index: 3; */
+}
+
+.row .nav-link {
+    color: black;
+}
+
+.nav-two {
+    position: fixed;
+    top: 55px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 3;
+}

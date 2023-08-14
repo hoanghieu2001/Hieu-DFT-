@@ -1,0 +1,51 @@
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    // margin-left: 116px;
+}
+
+.card {
+    margin: 20px;
+    width: 21.66%;
+    height: auto;
+}
+
+img {
+    // height: 260px;
+    // width: 370px;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.img {
+    overflow: hidden;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+.email {
+    height: 120px;
+    background-color: rgb(188, 192, 192);
+}
+
+h4.box2 {
+    margin-top: 20px;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover button {
+    color: #fff;
+    background-color: orange;
+}

@@ -1,0 +1,76 @@
+<app-banner></app-banner>
+<div class="box" style="background-color: #FFF5F7;">
+  <div class="container cart">
+    <div class="sale" style="position: relative;top: 30px;">
+      <img src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_flashSale_home_white_new.png"
+        alt="fhdsjsfj">
+      <p> Chương trình kết thúc trong</p>
+    </div>
+    <div class="clock">
+      <div class="from-right">
+        <div class="title-time">Thời gian còn lại:</div>
+        <div class="countdownt">
+          <div class="box">
+            <span class="num" id="day-box">
+              {{ remainingTime?.days | number: '2.0' }}
+            </span>
+            <span class="text">Ngày</span>
+          </div>
+          <div class="box">
+            <span class="num" id="hour-box">
+              {{ remainingTime?.hours | number: '2.0' }}
+            </span>
+            <span class="text">Giờ</span>
+          </div>
+          <div class="box">
+            <span class="num" id="minute-box">
+              {{ remainingTime?.minutes | number: '2.0' }}
+            </span>
+            <span class="text">Phút</span>
+          </div>
+          <div class="box">
+            <span class="num" id="second-box">
+              {{ remainingTime?.seconds | number: '2.0' }}
+            </span>
+            <span class="text">Giây</span>
+          </div>
+        </div>
+        <div class="box-sale-content">
+          <div class="box-sale-person">
+            <p class="content-sale-box">QUÀ TẶNG ĐẶC BIỆT:</p>
+          </div>
+          <div class="box-sale-content">
+            <div class="box-sale-person">
+              <p>Tặng <b>500K </b> cho mỗi chuyến đi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="true" [interval]="0" [indicatorsByChunk]="true">
+      <slide *ngFor="let sale of sales; let index=index">
+        <img [src]="sale.image" alt="image slide" style="display: block; width: 279px ;height: 155px;">
+        <div class="">
+        </div>
+        <div class="list-sale">
+          <div class="title-sale" style="font-weight: 600; padding-top: 10px;">
+            {{sale.title}}
+          </div>
+          <!-- <div class="star-vote">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div> -->
+          <div class="city">
+            <i class="fas fa-map-marker-alt"></i> {{sale.city}}
+            <p> {{sale.price}}</p>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+    <h5 class="text-center mb-4"><a href="" style="width: 120px; color: rgb(255, 51, 102);">Xem thêm <i
+          class="pi pi-angle-down"></i></a></h5>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+.cart {
+    position: relative;
+
+}
+
+button {
+    display: none;
+
+}
+
+h5 a {
+    color: rgb(6, 6, 6);
+    text-decoration: none;
+}
+
+
+
+.carousel-indicators .active {
+    display: none;
+    opacity: 0;
+}
+
+.input {
+    position: relative;
+    top: -330px;
+    z-index: 9;
+    left: 20rem;
+}
+
+.from-right {
+    text-align: right;
+}
+
+.title-time {
+    font-weight: bold;
+}
+
+.countdownt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.num {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 14px;
+}
+
+
+
+.content-sale-box {
+    font-weight: bold;
+}
+
+.box-sale-person {
+    margin-top: 10px;
+}
+
+// .carousel-indicators .ng-star-inserted {
+//     display: none;
+// }

@@ -1,0 +1,136 @@
+<!-- <app-header></app-header> -->
+<app-banner></app-banner>
+<section class="container">
+
+    <h3>Nhiều tính năng tiện lợi</h3>
+    <div class="row " style="margin-right: 10px;">
+        <div class="col-2dot4">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/07/1686109683770-0de509e062297a41ec946bfda95eea2b.png?tr=q-75,w-256"
+                alt="">
+        </div>
+        <div class="col-2dot4">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/07/1686109689547-360c2b13933490c880c7462c76b31c6d.png?tr=q-75,w-256"
+                alt="">
+        </div>
+        <div class="col-2dot4">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/07/1686109695279-31919238d72fc4fd92dc8e20a0c709c1.png?tr=q-75,w-256"
+                alt="">
+        </div>
+        <div class="col-2dot4">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/07/1686109700638-b92bf5072e13f53e088307ec31d8b527.png?tr=q-75,w-256"
+                alt="">
+        </div>
+        <div class="col-2dot4">
+            <img src="https://ik.imagekit.io/tvlk/image/imageResource/2023/06/07/1686109705817-5a460113f8d04999ff37828309b26008.png?tr=q-75,w-256"
+                alt="">
+        </div>
+
+    </div>
+    <!-- tab-select -->
+    <section>
+        <div class="list-hotel mt-2 ">
+            <div class="">
+                <tabset type="pills">
+                    <tab heading="Hà Nội" class="container ">
+                        <div class="row ">
+                            <ng-container *ngFor="let item of listTour; let index=index">
+
+                                <div class=" card text-center">
+                                    <div class="img text-center">
+                                        <img class="" src="{{item.img}}" alt="" style="width: 260px; height: 200px;">
+                                    </div>
+                                    <div class="item">
+                                        <h5> {{item.title}}</h5>
+                                        <div class="row mt-1">
+                                            <p class="price col-8"><i class="pi pi-shopping-bag"> {{item.price}} </i>
+                                            </p>
+                                            <div class="icon col-4 ">
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+
+
+                                            </div>
+                                        </div>
+                                        <a class="" href=""
+                                            style="font-weight: 500; margin-bottom: 10px;width: 120px;height: 40px;">Xem
+                                            thêm</a>
+
+
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </tab>
+                    <tab heading="Đà Nẵng" class="container ">
+                        <div class="row ">
+                            <ng-container *ngFor="let item of danang; let index=index">
+
+                                <div class=" card text-center">
+                                    <div class="img text-center">
+                                        <img class="" src="{{item.img}}" alt="" style="width: 260px; height: 200px;">
+                                    </div>
+                                    <div class="item">
+                                        <h5> {{item.title}}</h5>
+                                        <div class="row mt-1">
+                                            <p class="price col-8"><i class="pi pi-shopping-bag"> {{item.price}} </i>
+                                            </p>
+                                            <div class="icon col-4 ">
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+                                                <i class="pi pi-star-fill" style="color: #ffd600;"></i>
+
+
+                                            </div>
+                                        </div>
+                                        <a class="" href=""
+                                            style="font-weight: 500; margin-bottom: 10px;width: 120px;height: 40px;">Xem
+                                            thêm</a>
+
+
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </tab>
+                    <tab heading="Nha Trang" class="container ms-3"></tab>
+                    <tab heading="Hồ Chí Minh" class="container ms-3"></tab>
+
+                    <tab heading="Hải Phòng" class="container ms-3"></tab>
+
+                    <tab heading="Thái Bình" class="container ms-3"></tab>
+
+                </tabset>
+            </div>
+        </div>
+
+    </section>
+    <section>
+
+        <h3>
+            Thông tin du lịch mới nhất
+        </h3>
+        <p>Luôn dẫn đầu và nắm bắt những nguồn cảm hứng mới mẻ nhất</p>
+        <img class="mw-100"
+            src="https://ik.imagekit.io/tvlk/blog/2023/06/go-and-share-du-lich-amalfy-va-positano-y-10.jpeg?tr=dpr-1.5,h-476,q-40,w-1536"
+            alt="">
+    </section>
+    <section>
+        <h3>Du lịch Amalfy và Positano Ý tuyệt đẹp</h3>
+        <p>Nguyễn Thụy Mộc Nhiên</p>
+        <p>15 min read</p>
+        <div class="">
+
+            <carousel class="" [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="false" [interval]="0"
+                [indicatorsByChunk]="true">
+                <slide *ngFor="let slide of slides; let index=index" class="me-2">
+                    <img [src]="slide.image" alt="image slide" style="display: block; width: 100%; height: 200px;">
+                    <h5>{{slide.title}}</h5>
+                </slide>
+            </carousel>
+        </div>
+    </section>
+</section>
+<app-footer></app-footer>

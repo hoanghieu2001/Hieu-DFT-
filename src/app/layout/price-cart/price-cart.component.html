@@ -1,0 +1,21 @@
+<section class=" price-cart container ">
+    <div class="title-price-cart mt-4">
+        <h3>Địa điểm đến hàng đầu</h3>
+        <p>Khám phá ngay các tour, hoạt động du lịch và địa điểm tham quan cho hành trình du lịch của bạn</p>
+    </div>
+
+
+
+    <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="false" [interval]="0" [indicatorsByChunk]="true">
+        <slide class="col-3" *ngFor="let i of carts; let index=index">
+            <img class="mw-100" [src]="i.image" alt="image " style="display: block; width: 279px ;height: 155px;">
+            <div class="carousel-caption">
+            </div>
+            <div class="list-sale">
+                <div class="title">
+                    {{i.title}}
+                </div>
+            </div>
+        </slide>
+    </carousel>
+</section>

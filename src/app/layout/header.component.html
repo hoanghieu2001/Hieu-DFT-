@@ -1,0 +1,197 @@
+<!-- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <header-left-navbar></header-left-navbar>
+  <ul class="navbar-nav ml-auto">
+    <header-language-menu></header-language-menu>
+    <header-user-menu></header-user-menu>
+  </ul>
+</nav> -->
+<div class="header">
+  <nav class=" navbar navbar-expand-lg  justify-content-center position-fixed w-100 "
+    style="z-index: 6;background-color: #fff;">
+    <div class="container-fluid align-items-center">
+      <a class="navbar-brand" href="#">Tour 4U</a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav ms-auto me-auto ps-5 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center  mb-md-0">
+            <div class="btn-group" dropdown>
+              <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+                aria-controls="dropdown-basic">
+                <span class="caret">Tải ứng dụng</span>
+              </button>
+              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                <li role="menuitem"><a class="dropdown-item btn" href="#">Quét mã QR</a></li>
+                <img class="ms-3"
+                  src="https://ik.imagekit.io/tvlk/image/imageResource/2021/05/20/1621505512045-e090f5237022cf86afd98eb132f19086.png?tr=h-116,q-75,w-116"
+                  alt="">
+                <button class="mb-2 ms-2 btn btn-light" style="height: 50px; width: 142px;"><a
+                    style="text-decoration: none; color: black;font-size: 14px; " href="">Tải
+                    qua AppStore</a></button>
+                <button class="mb-2 ms-2 btn btn-light" style="height: 50px; width: 142px;"><a
+                    style="text-decoration: none; color: black;font-size: 14px;" href="">Tải qua CH
+                    play</a></button>
+
+              </ul>
+            </div>
+            <li>
+              <a class="nav-link px-2" routerLink="about/cac-tour-trong-nuoc" style="cursor: pointer;">
+                <i class="fa fa-umbrella-beach" style="padding-left:4px;"> </i>
+
+                Các tour
+                trong nước</a>
+            </li>
+            <li><a href="#" class="nav-link px-2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i class="pi
+pi-bookmark-fill"></i> Đã lưu</a>
+            </li>
+            <li><a href="" routerLink="about/chi-tiet-khu-du-lich" class="nav-link px-2"><i class="pi pi-book"></i> Đặt
+                chỗ của tôi</a></li>
+
+          </ul>
+
+        </ul>
+        <form class="d-flex me-2 " role="search">
+          <input class="form-control" style="border:1px solid #474242;" type="search" placeholder="Search"
+            (keyup.enter)="search($event.target.value)" aria-label="Search">
+        </form>
+        <!-- <a href="" class="me-2"><button style=" border: solid 1px #474242;" class="ms-2 btn btn-light" type="submit"><i
+              class="pi pi-user "></i></button></a> -->
+
+
+        <a type="button " class="btn btn-light me-2" (click)="openModal(template)" style="border: solid 1px ;"><i
+            class="pi pi-user "></i></a>
+
+        <ng-template #template>
+          <div class="modal-header">
+            <h4 class="modal-title pull-left">Đăng nhập</h4>
+            <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+              <span aria-hidden="true" class="visually-hidden">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-body p-5 pt-0">
+              <form class="">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary sign-in" type="submit"><a
+                    style="text-decoration: none; color: #fff;" href="./index.html">Đăng nhập</a></button>
+
+                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit"><a
+                    style="text-decoration: none; color: #fff;" href="./dang-ki.html">Đăng kí</a></button>
+
+
+                <small class="text-body-secondary">Nếu bạn chưa có tài khoản, vui lòng bấm vào đăng kí</small>
+                <hr class="my-4">
+                <h2 class="fs-5 fw-bold mb-3">Các phương thức đăng nhập khác</h2>
+                <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16">
+                    <use xlink:href="#twitter" />
+                  </svg>
+                  Sign up with Twitter
+                </button>
+                <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16">
+                    <use xlink:href="#facebook" />
+                  </svg>
+                  Sign up with Facebook
+                </button>
+                <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                  <svg class="bi me-1" width="16" height="16">
+                    <use xlink:href="#github" />
+                  </svg>
+                  Sign up with GitHub
+                </button>
+              </form>
+            </div>
+          </div>
+        </ng-template>
+
+
+
+        <a routerLink="/app/about/shopping">
+          <button style="border: solid 1px #474242;" class="btn btn-light" type="button">
+            <i class="pi pi-cart-plus btn-light"></i>
+          </button>
+        </a>
+
+      </div>
+    </div>
+
+  </nav>
+
+
+  <div class=" nav-two">
+    <ul class="nav nav-pills">
+
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+          aria-controls="dropdown-basic">
+          <span class="caret">Vận chuyển</span>
+        </button>
+        <!-- <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+          </li>
+        </ul> -->
+      </div>
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+          aria-controls="dropdown-basic">
+          Chỗ ở <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a routerLink="about/khach-san" style="cursor: pointer;" class="dropdown-item"
+              href="#">Khách sạn</a></li>
+          <!-- <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+          aria-controls="dropdown-basic">
+          Hoạt động giải trí <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a routerLink="about/cac-tour-du-lich" style="cursor: pointer;" class="dropdown-item"
+              href="#">Các tour du lịch</a></li>
+          <!-- <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn  dropdown-toggle"
+          aria-controls="dropdown-basic">
+          Sản phẩm bổ sung <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+          </li>
+        </ul>
+      </div>
+
+
+    </ul>
+
+  </div>
+</div>
