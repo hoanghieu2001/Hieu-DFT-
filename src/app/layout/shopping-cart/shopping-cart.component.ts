@@ -7,18 +7,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent {
-    totalPrice: number = 0;
+  totalPrice: number = 0;
+  totalParent: number = 0;
+  totalBaby: number = 0;
+  calculateTotalPrice(event: any) {
+    const selectedAdults: number = parseInt(event.target.value, 10);
+    const pricePerAdult: number = 3000000; // Giá 3 triệu đồng cho mỗi người lớn
+    this.totalParent = selectedAdults * pricePerAdult;
+    this.calculateTotal(); // Tính lại tổng giá tiền sau khi thay đổi số lượng người lớn
+  }
 
-    calculateTotalPrice(event: any) {
-        const selectedAdults: number = event.target.value;
-        const pricePerAdult: number = 3000000; // Giá 3 triệu đồng cho mỗi người lớn
-        this.totalPrice = selectedAdults * pricePerAdult;
-    }
-    babyPrice(event: any) {
-        const selectedChildren: number = event.target.value;
-        const pricePerChild: number = 2000000;
-        this.totalPrice = (selectedChildren * pricePerChild);
-    }
+  babyPrice(event: any) {
+    const selectedChildren: number = parseInt(event.target.value, 10);
+    const pricePerChild: number = 2000000; // Giá 2 triệu đồng cho mỗi trẻ em
+    this.totalBaby = selectedChildren * pricePerChild;
+    this.calculateTotal(); // Tính lại tổng giá tiền sau khi thay đổi số lượng trẻ con
+  }
+
+  calculateTotal() {
+    this.totalPrice = this.totalParent + this.totalBaby; // Tính tổng giá tiền tổng cộng
+  }
 
   constructor(private router: Router) { }
 

@@ -70,6 +70,7 @@ export class TourComponent implements OnInit {
         },
     ];
     newlist = [];
+
     // modalRef?: BsModalRef;
 
     constructor(private modalService: BsModalService,
@@ -100,13 +101,14 @@ export class TourComponent implements OnInit {
         if (name !== '') {
             this.listTour = this.listTour.filter(e => e.title.toLowerCase().includes(name.toLowerCase()));
             this.sortData(100);
+            debugger
+            console.log(this.sortData(100));
 
             if (this.listTour.length === 0) {
                 // in thông báo
-                this.sortData(100);
                 alert('Không còn tour nào phù hợp');
                 // tạo lại danh sách
-
+                this.sortData(100);
 
             }
         }
@@ -142,5 +144,6 @@ export class TourComponent implements OnInit {
             );
         }
     }
+
 
 }
