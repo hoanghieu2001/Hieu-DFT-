@@ -36,7 +36,7 @@ import { ShoppingCartComponent } from './layout/shopping-cart/shopping-cart.comp
                         path: 'about/cac-tour-du-lich', component: AccommodationComponent, canActivate: [AppRouteGuard],
                     },
                     {
-                        path: 'about/chi-tiet-khu-du-lich', component: ProductComponent, canActivate: [AppRouteGuard]
+                        path: 'about/chi-tiet-khu-du-lich', component: ShoppingCartComponent, canActivate: [AppRouteGuard]
                     },
                     {
                         path: 'about/thanh-toan', component: FormInformationComponent, canActivate: [AppRouteGuard]
@@ -45,7 +45,7 @@ import { ShoppingCartComponent } from './layout/shopping-cart/shopping-cart.comp
 
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] },
                     { path: 'about/shopping', component: ShoppingCartComponent, canActivate: [AppRouteGuard] },
-                    {path :'about/chitiet', component:FormInformationComponent, canActivate:[AppRouteGuard]}
+                    { path: 'about/chitiet', component: FormInformationComponent, canActivate: [AppRouteGuard] }
 
                 ]
             },

@@ -34,4 +34,7 @@ nav {
     background-color: #fff;
     width: 100%;
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    /* left: -84px; */
 }
