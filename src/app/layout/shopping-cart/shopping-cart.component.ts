@@ -10,6 +10,7 @@ export class ShoppingCartComponent {
   totalPrice: number = 0;
   totalParent: number = 0;
   totalBaby: number = 0;
+  voucherCode: string = "";
   calculateTotalPrice(event: any) {
     const selectedAdults: number = parseInt(event.target.value, 10);
     const pricePerAdult: number = 3000000; // Giá 3 triệu đồng cho mỗi người lớn
@@ -29,7 +30,22 @@ export class ShoppingCartComponent {
   }
 
   constructor(private router: Router) { }
+  applyVoucher() {
+    // Kiểm tra giá trị voucherCode và tính toán giảm giá
+    if (this.voucherCode === "tour4u") {
+      this.totalPrice -= 500000; // Giảm 500000 VND
+    } else if (this.voucherCode === "hieudeptrai") {
+      this.totalPrice -= 800000; // Giảm 800000 VND
+    }
 
+    // Đảm bảo tổng tiền không nhỏ hơn 0
+    if (this.totalPrice < 0) {
+      this.totalPrice = 0;
+    }
+  }
+  hienthithongbao(): void {
+    alert('bạn ngu vl')
+  }
   shopping() {
     this.router.navigateByUrl('/app/about/shopping');
   }
