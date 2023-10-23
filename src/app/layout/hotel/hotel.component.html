@@ -1,7 +1,11 @@
 <!-- <app-header></app-header> -->
 <app-banner></app-banner>
 <section class="container">
-
+    <!-- <div *ngFor="let item of listsPhong">
+        <p>{{item.name}}</p>
+        <p>{{item.giaphong}}</p>
+        <img [src]="'../../../assets/img/img-phong/' + item.img" alt="">
+    </div> -->
     <h3>Nhiều tính năng tiện lợi</h3>
     <div class="row " style="margin-right: 10px;">
         <div class="col-2dot4">
@@ -65,17 +69,23 @@
                     </tab>
                     <tab heading="Đà Nẵng" class="container ">
                         <div class="row ">
-                            <ng-container *ngFor="let item of danang; let index=index">
+                            <ng-container *ngFor="let item of listsPhong">
 
                                 <div class=" card text-center">
                                     <div class="img text-center">
-                                        <img class="" src="{{item.img}}" alt="" style="width: 260px; height: 200px;">
+                                        <!-- <img class="" src="{{item.img}}" alt="" style="width: 260px; height: 200px;"> -->
+                                        <img [src]="'../../../assets/img/img-phong/' + item.img" alt=""
+                                            style="width: 260px; height: 200px;">
+
                                     </div>
                                     <div class="item">
-                                        <h5> {{item.title}}</h5>
+                                        <h5> {{item.name}}</h5>
                                         <div class="row mt-1">
-                                            <p class="price col-8"><i class="pi pi-shopping-bag"> {{item.price}} </i>
+                                            <!-- <p class="price col-8"><i class="pi pi-shopping-bag"> {{item.price}} </i>
+                                            </p> -->
+                                            <p class=" col-8"><i class="pi pi-shopping-bag"> {{item.giaphong}}</i>
                                             </p>
+
                                             <div class="icon col-4 ">
                                                 <i class="pi pi-star-fill" style="color: #ffd600;"></i>
                                                 <i class="pi pi-star-fill" style="color: #ffd600;"></i>
@@ -92,8 +102,16 @@
 
                                     </div>
                                 </div>
+
+
+                                <!-- <div *ngFor="let item of listsPhong">
+                                    <p>{{item.name}}</p>
+                                    <p>{{item.giaphong}}</p>
+                                    <img [src]="'../../../assets/img/img-phong/' + item.img" alt="">
+                                </div> -->
                             </ng-container>
                         </div>
+
                     </tab>
                     <tab heading="Nha Trang" class="container ms-3"></tab>
                     <tab heading="Hồ Chí Minh" class="container ms-3"></tab>
@@ -132,5 +150,6 @@
             </carousel>
         </div>
     </section>
+
 </section>
 <app-footer></app-footer>

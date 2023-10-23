@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { title } from 'process';
 import { Router } from '@angular/router';
+import { PhongServiceServiceProxy } from '@shared/service-proxies/service-proxies';
 
 @Component({
   selector: 'app-hotel',
@@ -8,8 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./hotel.component.scss']
 })
 export class HotelComponent implements OnInit {
-  ngOnInit(): void {
+  listsPhong: any;
 
+  constructor(
+    private phong: PhongServiceServiceProxy,
+  ) { }
+  ngOnInit(): void {
+    this.phong.getAll().subscribe((res) => {
+      this.listsPhong = res;
+      console.log('phong', res);
+    })
   }
   listTour = [
     {
